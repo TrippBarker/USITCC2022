@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	
 	public static final String TABLE_VIEW_SCENE_PATH = "scenes/TableView.fxml";
-	public static final String LOGIN_SCENE_PATH = "scenes/LoginScene.fxml";
+	public static final String LOGIN_SCENE_PATH = "scenes/CreateNewUser.fxml";
 	
 	public static final GrandSlamWriter gSlamWriter = new GrandSlamWriter();
 	public static final GrandSlamReader gSlamReader = new GrandSlamReader();
