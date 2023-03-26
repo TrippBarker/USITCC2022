@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<USERS>
+    <user type="Admin">
+        <username>admin</username>
+        <password>-2130961281</password>
+        <adminPassword>-71939802</adminPassword>
+    </user>
+    <user type="Player">
+        <username>rfederer</username>
+        <password>-1353481653</password>
+        <playerID>P001</playerID>
+        <fName>Roger</fName>
+        <lName>Federer</lName>
+    </user>
+    <user type="Player">
+        <username>rnadal</username>
+        <password>1466306322</password>
+        <playerID>P002</playerID>
+        <fName>Rafael</fName>
+        <lName>Nadal</lName>
+    </user>
+</USERS>

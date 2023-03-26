@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SLAMS>
+    <slam slamID="2022_1">
+        <slamName>Austrailian Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 2,275,000*</playerWinnings>
+    </slam>
+    <slam slamID="2022_2">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,925,000*</playerWinnings>
+    </slam>
+    <slam slamID="2020_2">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,775,000*</playerWinnings>
+    </slam>
+    <slam slamID="2019_2">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,655,000*</playerWinnings>
+    </slam>
+    <slam slamID="2019_4">
+        <slamName>U.S. Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 2,125,000*</playerWinnings>
+    </slam>
+    <slam slamID="2018_1">
+        <slamName>Austrailian Open</slamName>
+        <playerID>P001</playerID>
+        <playerName>Rodger Federer</playerName>
+        <playerWinnings>$ 2,000,000*</playerWinnings>
+    </slam>
+    <slam slamID="2018_2">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,500,000*</playerWinnings>
+    </slam>
+    <slam slamID="2017_1">
+        <slamName>Austrailian Open</slamName>
+        <playerID>P001</playerID>
+        <playerName>Rodger Federer</playerName>
+        <playerWinnings>$ 1,875,000*</playerWinnings>
+    </slam>
+    <slam slamID="2017_2">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,375,000*</playerWinnings>
+    </slam>
+    <slam slamID="2017_3">
+        <slamName>Wimbledon Open</slamName>
+        <playerID>P001</playerID>
+        <playerName>Rodger Federer</playerName>
+        <playerWinnings>$ 2,250,000*</playerWinnings>
+    </slam>
+    <slam slamID="2017_4">
+        <slamName>U.S. Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,925,000*</playerWinnings>
+    </slam>
+</SLAMS>

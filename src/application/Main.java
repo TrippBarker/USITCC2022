@@ -1,23 +1,55 @@
 package application;
 	
+import java.util.ArrayList;
+
+import application.readerswriters.*;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	public static final String LOGIN_SCENE_PATH = "scenes/TableView.fxml";
+	
+	public ArrayList<GrandSlam> gSlams = gSlamReader.readXML();
+	public ArrayList<User> usersAL = userReader.readXML();
+	
+	public static final GrandSlamWriter gSlamWriter = new GrandSlamWriter();
+	public static final GrandSlamReader gSlamReader = new GrandSlamReader();
+	
+	public static final UserWriter userWriter = new UserWriter();
+	public static final UserReader userReader = new UserReader();
+	
 	@Override
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
+	public void start(Stage primaryStage) throws Exception {
+		Scene scene = new Scene(FXMLLoader.load(getClass().getResource(LOGIN_SCENE_PATH)));
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		//gSlams.add(new GrandSlam("2022_1", "Austrailian Open", "P002", "Rafael Nadal", "$ 2,275,000*"));
+		//gSlams.add(new GrandSlam("2022_2", "French Open", "P002", "Rafael Nadal", "$ 1,925,000*"));
+		//gSlams.add(new GrandSlam("2020_2", "French Open", "P002", "Rafael Nadal", "$ 1,775,000*"));
+		//gSlams.add(new GrandSlam("2019_2", "French Open", "P002", "Rafael Nadal", "$ 1,655,000*"));
+		//gSlams.add(new GrandSlam("2019_4", "U.S. Open", "P002", "Rafael Nadal", "$ 2,125,000*"));
+		//gSlams.add(new GrandSlam("2018_1", "Austrailian Open", "P001", "Rodger Federer", "$ 2,000,000*"));
+		//gSlams.add(new GrandSlam("2018_2", "French Open", "P002", "Rafael Nadal", "$ 1,500,000*"));
+		//gSlams.add(new GrandSlam("2017_1", "Austrailian Open", "P001", "Rodger Federer", "$ 1,875,000*"));
+		//gSlams.add(new GrandSlam("2017_2", "French Open", "P002", "Rafael Nadal", "$ 1,375,000*"));
+		//gSlams.add(new GrandSlam("2017_3", "Wimbledon Open", "P001", "Rodger Federer", "$ 2,250,000*"));
+		//gSlams.add(new GrandSlam("2017_4", "U.S. Open", "P002", "Rafael Nadal", "$ 1,925,000*"));
+		//gSlamWriter.buildDocument(gSlams);
+		
+		//usersAL.add(new Admin("admin", "nimda", "superuser"));
+		//usersAL.add(new Player("rfederer", "gsw20", "P001", "Roger", "Federer"));
+		//usersAL.add(new Player("rnadal", "gsw22", "P002", "Rafael", "Nadal"));
+		//userWriter.buildDocument(usersAL);
+		
+		for (User user : usersAL) {
+			System.out.println(user.toString());
+			System.out.println("-----------------------------------");
 		}
+		
 	}
 	
 	public static void main(String[] args) {
