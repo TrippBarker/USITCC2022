@@ -11,10 +11,8 @@ import javafx.scene.Scene;
 
 public class Main extends Application {
 	
-	public static final String LOGIN_SCENE_PATH = "scenes/TableView.fxml";
-	
-	public ArrayList<GrandSlam> gSlams = gSlamReader.readXML();
-	public ArrayList<User> usersAL = userReader.readXML();
+	public static final String TABLE_VIEW_SCENE_PATH = "scenes/TableView.fxml";
+	public static final String LOGIN_SCENE_PATH = "scenes/LoginScene.fxml";
 	
 	public static final GrandSlamWriter gSlamWriter = new GrandSlamWriter();
 	public static final GrandSlamReader gSlamReader = new GrandSlamReader();
@@ -22,11 +20,15 @@ public class Main extends Application {
 	public static final UserWriter userWriter = new UserWriter();
 	public static final UserReader userReader = new UserReader();
 	
+	public static ArrayList<GrandSlam> gSlams = gSlamReader.readXML();
+	public static ArrayList<User> usersAL = userReader.readXML();
+	
+	public static SceneSwitcher ss;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Scene scene = new Scene(FXMLLoader.load(getClass().getResource(LOGIN_SCENE_PATH)));
-		primaryStage.setScene(scene);
-		primaryStage.show();
+		ss = new SceneSwitcher(primaryStage);
+		ss.switchScene(LOGIN_SCENE_PATH);
 		//gSlams.add(new GrandSlam("2022_1", "Austrailian Open", "P002", "Rafael Nadal", "$ 2,275,000*"));
 		//gSlams.add(new GrandSlam("2022_2", "French Open", "P002", "Rafael Nadal", "$ 1,925,000*"));
 		//gSlams.add(new GrandSlam("2020_2", "French Open", "P002", "Rafael Nadal", "$ 1,775,000*"));
