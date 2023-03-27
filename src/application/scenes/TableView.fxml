@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TableViewController">
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -43,13 +43,13 @@
                   </Button>
                </children>
             </HBox>
-            <TableView prefHeight="138.0" prefWidth="43.0">
+            <TableView fx:id="gSlamsTable">
               <columns>
-                <TableColumn prefWidth="86.4000244140625" text="Grand Slam ID" />
-                <TableColumn prefWidth="109.60003662109375" text="Grand Slam Name" />
-                  <TableColumn prefWidth="109.5999755859375" text="Winning Player ID" />
-                  <TableColumn prefWidth="139.20001220703125" text="Winning Player Name" />
-                  <TableColumn prefWidth="158.4000244140625" text="Winning Player Earnings" />
+                <TableColumn fx:id="slamIDField" prefWidth="86.4000244140625" text="Grand Slam ID" />
+                <TableColumn fx:id="slamNameField" prefWidth="109.60003662109375" text="Grand Slam Name" />
+                  <TableColumn fx:id="playerIDField" prefWidth="109.5999755859375" text="Winning Player ID" />
+                  <TableColumn fx:id="playerNameField" prefWidth="139.20001220703125" text="Winning Player Name" />
+                  <TableColumn fx:id="playerWinningsField" prefWidth="158.4000244140625" text="Winning Player Earnings" />
               </columns>
             </TableView>
          </children>

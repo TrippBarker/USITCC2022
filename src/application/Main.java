@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 import application.readerswriters.*;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
 
 
 public class Main extends Application {
 	
 	public static final String TABLE_VIEW_SCENE_PATH = "scenes/TableView.fxml";
-	public static final String LOGIN_SCENE_PATH = "scenes/CreateNewUser.fxml";
+	public static final String LOGIN_SCENE_PATH = "scenes/LoginScene.fxml";
 	
 	public static final GrandSlamWriter gSlamWriter = new GrandSlamWriter();
 	public static final GrandSlamReader gSlamReader = new GrandSlamReader();
@@ -20,8 +20,10 @@ public class Main extends Application {
 	public static final UserWriter userWriter = new UserWriter();
 	public static final UserReader userReader = new UserReader();
 	
-	public static ArrayList<GrandSlam> gSlams = gSlamReader.readXML();
+	public static ObservableList<GrandSlam> gSlams = FXCollections.observableArrayList(gSlamReader.readXML());
 	public static ArrayList<User> usersAL = userReader.readXML();
+	
+	public static User currentUser;
 	
 	public static SceneSwitcher ss;
 	
