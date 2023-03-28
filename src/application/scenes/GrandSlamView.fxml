@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TableViewController">
+   <children>
+      <TableView fx:id="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="slamID" prefWidth="75.0" text="slamID" />
+          <TableColumn fx:id="slamName" prefWidth="75.0" text="slamName" />
+            <TableColumn fx:id="playerID" prefWidth="75.0" text="playerID" />
+            <TableColumn fx:id="playerName" prefWidth="75.0" text="playerName" />
+            <TableColumn fx:id="playerWinnings" prefWidth="105.33331298828125" text="playerWinnings" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -19,11 +19,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import application.*;
+import javafx.collections.ObservableList;
 
 
 
 public class GrandSlamWriter {
-	public void buildDocument(ArrayList<GrandSlam> gSlams) throws ParserConfigurationException, TransformerConfigurationException, TransformerException, TransformerFactoryConfigurationError {
+	public void buildDocument(ObservableList<GrandSlam> gSlams) throws ParserConfigurationException, TransformerConfigurationException, TransformerException, TransformerFactoryConfigurationError {
 		Document doc = createXMLDoc(gSlams);
 		outputAsFile(doc, "src/application/data/GrandSlamInformation.xml");
 	}
@@ -48,7 +49,7 @@ public class GrandSlamWriter {
 	}
 	
 	
-	public Document createXMLDoc(ArrayList<GrandSlam> gSlams) 
+	public Document createXMLDoc(ObservableList<GrandSlam> gSlams) 
 			throws ParserConfigurationException {
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

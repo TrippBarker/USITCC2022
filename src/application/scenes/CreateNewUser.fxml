@@ -18,7 +18,7 @@
                   <Label alignment="CENTER" text="Create New User" />
                </children>
                <VBox.margin>
-                  <Insets top="45.0" />
+                  <Insets />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
@@ -28,7 +28,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField alignment="CENTER">
+                  <TextField>
                      <HBox.margin>
                         <Insets left="44.0" />
                      </HBox.margin>
@@ -42,7 +42,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField alignment="CENTER">
+                  <TextField>
                      <HBox.margin>
                         <Insets left="46.0" />
                      </HBox.margin>
@@ -59,7 +59,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField alignment="CENTER">
+                  <TextField>
                      <HBox.margin>
                         <Insets left="54.0" />
                      </HBox.margin>
@@ -73,7 +73,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField alignment="CENTER">
+                  <TextField>
                      <HBox.margin>
                         <Insets left="48.0" />
                      </HBox.margin>
@@ -87,7 +87,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <PasswordField alignment="CENTER">
+                  <PasswordField>
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>

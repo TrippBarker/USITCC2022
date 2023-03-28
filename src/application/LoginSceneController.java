@@ -32,16 +32,16 @@ public class LoginSceneController {
 					Admin admin = (Admin) user;
 					String adminHashedPass = hashPass(usernameField.getText(), adminPWField.getText());
 					if (admin.getPassword().equals(hashedPass) && admin.getAdminPassword().equals(adminHashedPass)) {
-						Main.ss.switchScene(Main.TABLE_VIEW_SCENE_PATH);
 						Main.currentUser = admin;
+						Main.ss.switchScene(Main.TABLE_VIEW_SCENE_PATH);
 					}
 					else {
 						errorMessage.setVisible(true);
 					}
 				} else {
 					if (user.getPassword().equals(hashedPass)) {
-						Main.ss.switchScene(Main.TABLE_VIEW_SCENE_PATH);
 						Main.currentUser = user;
+						Main.ss.switchScene(Main.TABLE_VIEW_SCENE_PATH);
 					} else {
 						errorMessage.setVisible(true);
 					}

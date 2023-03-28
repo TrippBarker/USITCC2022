@@ -6,4 +6,6 @@ module USITCC2022 {
 	requires javafx.base;
 	
 	opens application to javafx.graphics, javafx.fxml;
+	
+	exports application;
 }

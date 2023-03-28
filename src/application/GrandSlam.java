@@ -57,12 +57,4 @@ public class GrandSlam {
 		this.playerWinnings = playerWinnings;
 	};
 	
-	
-	@Override
-	public String toString() {
-		String str;
-		 str = "Slam ID: " + getSlamID() + "\nSlam Name: " + getSlamName() + "\nPlayer ID: " + getPlayerID() + "\nPlayer Name: " + getPlayerName() + "\nPlayer Winnings: " + getPlayerWinnings();
-		return str;
-	}
-	
 }

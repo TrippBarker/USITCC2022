@@ -8,27 +8,26 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IndRecController">
    <children>
-      <VBox alignment="CENTER">
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Indivual Records" />
+                  <Label alignment="CENTER" text="Individual Record" />
                </children>
                <VBox.margin>
-                  <Insets top="45.0" />
+                  <Insets />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Grand Slam ID">
+                  <Label alignment="CENTER" text="Grand Slam ID">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField alignment="CENTER">
+                  <TextField fx:id="slamIDTF" onKeyTyped="#checkValidEntry">
                      <HBox.margin>
                         <Insets left="51.0" />
                      </HBox.margin>
@@ -37,26 +36,29 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Grand Slam Name">
+                  <Label alignment="CENTER" text="Grand Slam Name">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="slamNameTF" onKeyTyped="#checkValidEntry">
                      <HBox.margin>
                         <Insets left="32.0" />
                      </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </TextField>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Winning Player ID">
+                  <Label alignment="CENTER" text="Winning Player ID">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="playerIDTF" onKeyTyped="#checkValidEntry">
                      <HBox.margin>
                         <Insets left="33.0" />
                      </HBox.margin>
@@ -65,12 +67,12 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Winning Player Name">
+                  <Label alignment="CENTER" text="Winning Player Name">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="playerNameTF" onKeyTyped="#checkValidEntry">
                      <HBox.margin>
                         <Insets left="13.0" />
                      </HBox.margin>
@@ -79,21 +81,17 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label text="Winning Player Earnings">
+                  <Label alignment="CENTER" text="Winning Player Earnings">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
-                     <HBox.margin>
-                        <Insets left="-1.0" />
-                     </HBox.margin>
-                  </TextField>
+                  <TextField fx:id="playerWinningsTF" onKeyTyped="#checkValidEntry" />
                </children>
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" text="Previous">
+                  <Button fx:id="prvBtn" alignment="CENTER" mnemonicParsing="false" text="Previous">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -101,22 +99,22 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Next">
+                  <Button fx:id="nxtBtn" alignment="CENTER" mnemonicParsing="false" text="Next">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Delete">
+                  <Button fx:id="dltBtn" alignment="CENTER" mnemonicParsing="false" text="Delete">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Save">
+                  <Button fx:id="saveBtn" alignment="CENTER" mnemonicParsing="false" text="Save">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="New" />
+                  <Button fx:id="newBtn" alignment="CENTER" mnemonicParsing="false" onAction="#newRec" text="New" />
                </children>
                <VBox.margin>
                   <Insets />
