@@ -1,16 +1,26 @@
 package application;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 
-public class IndRecController {
+public class IndRecController implements Initializable{
+	
+	private int index;
 	
 
     @FXML
@@ -18,7 +28,8 @@ public class IndRecController {
     			   newBtn, 
     			   nxtBtn,
     			   prvBtn, 
-    			   saveBtn;
+    			   saveBtn,
+    			   backBtn;
 
     @FXML
     private TextField playerIDTF,
@@ -26,6 +37,10 @@ public class IndRecController {
     				  slamIDTF,
     				  slamNameTF,
     				  playerWinningsTF;
+    
+	
+	@FXML
+	Label recID;
 
 
 	@FXML
@@ -37,10 +52,45 @@ public class IndRecController {
 			playerWinningsTF.getText().length() > 1) {
 			Main.gSlams.add(new GrandSlam(slamIDTF.getText(), slamNameTF.getText(), playerIDTF.getText(), playerNameTF.getText(), playerWinningsTF.getText()));
 			Main.gSlamWriter.buildDocument(Main.gSlams);
-			System.out.println("hello");
 		}
 	}
 	
+	@FXML
+	protected void goBack() throws IOException {
+		Main.ss.switchScene(Main.EDIT_CHOICE_PATH);
+	}
+	
+	@FXML
+	protected void nextRecord() {
+		if (index <= Main.gSlams.size() -2) {
+			index++;
+		} else {
+			index = 0;
+		}
+		changeRecord();
+	}
+	
+	@FXML
+	protected void prvRecord() {
+		if (index > 0) {
+			index--;
+		} else {
+			index = Main.gSlams.size() - 1;
+		}
+		changeRecord();
+	}
+	
+	@FXML
+	protected void dltRecord() throws TransformerConfigurationException, ParserConfigurationException, TransformerException, TransformerFactoryConfigurationError {
+		if (Main.gSlams.size() == 1) {
+			Alert alert = new Alert(AlertType.ERROR,"cannot delete last record!!");
+			alert.show();
+		} else {
+			Main.gSlams.remove(index);
+			prvRecord();
+			Main.gSlamWriter.buildDocument(Main.gSlams);
+		}
+	}
 	
 	public void checkValidEntry(KeyEvent e) {
 		TextField source = (TextField)e.getSource();
@@ -73,5 +123,20 @@ public class IndRecController {
 			source.setText(source.getText().substring(0, maxLen));
 		}
 		source.positionCaret(caretPos);
+	}
+	
+	public void changeRecord() {
+		recID.setText("Individual Record # " + (index + 1 ));;
+		playerIDTF.setText(Main.gSlams.get(index).getPlayerID());
+		playerNameTF.setText(Main.gSlams.get(index).getPlayerName());
+		slamIDTF.setText(Main.gSlams.get(index).getSlamID());
+		slamNameTF.setText(Main.gSlams.get(index).getSlamName());
+		playerWinningsTF.setText(Main.gSlams.get(index).getPlayerWinnings());
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		index = 0;
+		changeRecord();
 	}
 }

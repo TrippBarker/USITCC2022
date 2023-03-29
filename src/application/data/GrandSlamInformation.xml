@@ -66,16 +66,4 @@
         <playerName>Rafael Nadal</playerName>
         <playerWinnings>$ 1,925,000*</playerWinnings>
     </slam>
-    <slam slamID="2023_1">
-        <slamName>FrenchOpen</slamName>
-        <playerID>P001</playerID>
-        <playerName>RogerFederer</playerName>
-        <playerWinnings>10000</playerWinnings>
-    </slam>
-    <slam slamID="aaaaa">
-        <slamName>aaaaa</slamName>
-        <playerID>aaaaa</playerID>
-        <playerName>aaaaa</playerName>
-        <playerWinnings>123456789</playerWinnings>
-    </slam>
 </SLAMS>

@@ -14,7 +14,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
                <children>
-                  <Label alignment="CENTER" text="Individual Record" />
+                  <Label fx:id="recID" alignment="CENTER" text="Individual Record" />
                </children>
                <VBox.margin>
                   <Insets />
@@ -91,7 +91,7 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <Button fx:id="prvBtn" alignment="CENTER" mnemonicParsing="false" text="Previous">
+                  <Button fx:id="prvBtn" alignment="CENTER" mnemonicParsing="false" onAction="#prvRecord" text="Previous">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -99,12 +99,12 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="nxtBtn" alignment="CENTER" mnemonicParsing="false" text="Next">
+                  <Button fx:id="nxtBtn" alignment="CENTER" mnemonicParsing="false" onAction="#nextRecord" text="Next">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="dltBtn" alignment="CENTER" mnemonicParsing="false" text="Delete">
+                  <Button fx:id="dltBtn" alignment="CENTER" mnemonicParsing="false" onAction="#dltRecord" text="Delete">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
@@ -125,5 +125,6 @@
             </HBox>
          </children>
       </VBox>
+      <Button fx:id="backBtn" mnemonicParsing="false" onAction="#goBack" text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
    </children>
 </AnchorPane>

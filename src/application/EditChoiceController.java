@@ -29,6 +29,6 @@ public class EditChoiceController {
 
     @FXML
     protected void goBack(ActionEvent event) throws IOException {
-    	Main.ss.switchScene(Main.LOGIN_SCENE_PATH);
+    	Main.ss.switchScene(Main.TABLE_VIEW_SCENE_PATH);
     }
 }
