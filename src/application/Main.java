@@ -14,7 +14,8 @@ public class Main extends Application {
 	public static final String TABLE_VIEW_SCENE_PATH = "scenes/TableView.fxml";
 	public static final String LOGIN_SCENE_PATH = "scenes/LoginScene.fxml";
 	public static final String IND_REC_SCENE_PATH = "scenes/IndividualRecord.fxml";
-	public static final String NEW_USER_SCENE_PATH = "scene/CreateNewUser.fxml";
+	public static final String NEW_USER_SCENE_PATH = "scenes/CreateNewUser.fxml";
+	public static final String EDIT_CHOICE_PATH = "scenes/EditChoice.fxml";
 	
 	public static final GrandSlamWriter gSlamWriter = new GrandSlamWriter();
 	public static final GrandSlamReader gSlamReader = new GrandSlamReader();
@@ -32,7 +33,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		ss = new SceneSwitcher(primaryStage);
-		ss.switchScene(LOGIN_SCENE_PATH);
+		ss.switchScene(EDIT_CHOICE_PATH);
 		//gSlams.add(new GrandSlam("2022_1", "Austrailian Open", "P002", "Rafael Nadal", "$ 2,275,000*"));
 		//gSlams.add(new GrandSlam("2022_2", "French Open", "P002", "Rafael Nadal", "$ 1,925,000*"));
 		//gSlams.add(new GrandSlam("2020_2", "French Open", "P002", "Rafael Nadal", "$ 1,775,000*"));
