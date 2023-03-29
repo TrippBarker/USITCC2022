@@ -92,6 +92,25 @@ public class IndRecController implements Initializable{
 		}
 	}
 	
+	@FXML
+	protected void saveRecord() throws TransformerConfigurationException, ParserConfigurationException, TransformerException, TransformerFactoryConfigurationError {
+		if (playerIDTF.getText().length() > 1 &&
+				playerNameTF.getText().length() > 1 &&
+				slamIDTF.getText().length() > 1 && 
+				slamNameTF.getText().length() > 1 &&
+				playerWinningsTF.getText().length() > 1) {
+				Main.gSlams.get(index).setPlayerID(playerIDTF.getText());
+				Main.gSlams.get(index).setPlayerName(playerNameTF.getText());
+				Main.gSlams.get(index).setSlamID(slamIDTF.getText());
+				Main.gSlams.get(index).setSlamName(slamNameTF.getText());
+				Main.gSlams.get(index).setPlayerWinnings(playerWinningsTF.getText());
+				Main.gSlamWriter.buildDocument(Main.gSlams);
+		} else {
+			Alert alert = new Alert(AlertType.ERROR,"bad player info");
+			alert.show();
+		}
+	}
+	
 	public void checkValidEntry(KeyEvent e) {
 		TextField source = (TextField)e.getSource();
 		int caretPos = source.getCaretPosition();
