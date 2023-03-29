@@ -50,8 +50,10 @@ public class IndRecController implements Initializable{
 			slamIDTF.getText().length() > 1 && 
 			slamNameTF.getText().length() > 1 &&
 			playerWinningsTF.getText().length() > 1) {
-			Main.gSlams.add(new GrandSlam(slamIDTF.getText(), slamNameTF.getText(), playerIDTF.getText(), playerNameTF.getText(), playerWinningsTF.getText()));
+			Main.gSlams.add(new GrandSlam(slamIDTF.getText(), slamNameTF.getText(), playerIDTF.getText(), playerNameTF.getText(), convertWinnings()));
 			Main.gSlamWriter.buildDocument(Main.gSlams);
+			index = Main.gSlams.size() - 1;
+			changeRecord();
 		}
 	}
 	
@@ -95,16 +97,17 @@ public class IndRecController implements Initializable{
 	@FXML
 	protected void saveRecord() throws TransformerConfigurationException, ParserConfigurationException, TransformerException, TransformerFactoryConfigurationError {
 		if (playerIDTF.getText().length() > 1 &&
-				playerNameTF.getText().length() > 1 &&
-				slamIDTF.getText().length() > 1 && 
-				slamNameTF.getText().length() > 1 &&
-				playerWinningsTF.getText().length() > 1) {
+			playerNameTF.getText().length() > 1 &&
+			slamIDTF.getText().length() > 1 && 
+			slamNameTF.getText().length() > 1 &&
+			playerWinningsTF.getText().length() > 1) {
 				Main.gSlams.get(index).setPlayerID(playerIDTF.getText());
 				Main.gSlams.get(index).setPlayerName(playerNameTF.getText());
 				Main.gSlams.get(index).setSlamID(slamIDTF.getText());
 				Main.gSlams.get(index).setSlamName(slamNameTF.getText());
-				Main.gSlams.get(index).setPlayerWinnings(playerWinningsTF.getText());
+				Main.gSlams.get(index).setPlayerWinnings(convertWinnings());
 				Main.gSlamWriter.buildDocument(Main.gSlams);
+				changeRecord();
 		} else {
 			Alert alert = new Alert(AlertType.ERROR,"bad player info");
 			alert.show();
@@ -122,6 +125,7 @@ public class IndRecController implements Initializable{
 			maxLen = 10;
 			break;
 		case "playerNameTF":
+			regex = "[^a-zA-Z\\s]";
 			maxLen = 16;
 			break;
 		case "slamIDTF":
@@ -129,6 +133,7 @@ public class IndRecController implements Initializable{
 			maxLen = 8;
 			break;
 		case "slamNameTF":
+			regex = "[^a-zA-Z\\s.]";
 			maxLen = 20;
 			break;
 		case "playerWinningsTF":
@@ -158,4 +163,21 @@ public class IndRecController implements Initializable{
 		index = 0;
 		changeRecord();
 	}
+	
+	private String convertWinnings() {
+		String winnings = playerWinningsTF.getText();
+		try{
+			Integer.parseInt(winnings);
+		}catch(NumberFormatException nfe) {
+			return winnings;
+		}
+		int commaCounter = 0;
+		for (int i = winnings.length(); i > 0; i -= 1) {
+			if ((winnings.length() - i - commaCounter) % 3 == 0 && i!= winnings.length()) {
+				winnings = winnings.substring(0, i) + "," + winnings.substring(i);
+				commaCounter++;
+			}
+		}
+		return "$ " + winnings + "*";
+	};
 }

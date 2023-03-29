@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <SLAMS>
     <slam slamID="2023_5">
-        <slamName>French Open</slamName>
+        <slamName>Germany Open</slamName>
         <playerID>P002</playerID>
         <playerName>Rafael Nadal</playerName>
-        <playerWinnings>$ 1,925,000*</playerWinnings>
+        <playerWinnings>$ 10,257,892*</playerWinnings>
     </slam>
     <slam slamID="2022_1">
         <slamName>Austrailian Open</slamName>
@@ -28,7 +28,7 @@
         <slamName>French Open</slamName>
         <playerID>P002</playerID>
         <playerName>Rafael Nadal</playerName>
-        <playerWinnings>$ 1,655,000*</playerWinnings>
+        <playerWinnings>$ 655,000*</playerWinnings>
     </slam>
     <slam slamID="2018_2">
         <slamName>French Open</slamName>
@@ -40,13 +40,13 @@
         <slamName>Austrailian Open</slamName>
         <playerID>P001</playerID>
         <playerName>Rodger Federer</playerName>
-        <playerWinnings>$ 2,000,000*</playerWinnings>
+        <playerWinnings>$ 250,605,000*</playerWinnings>
     </slam>
     <slam slamID="2017_4">
         <slamName>U.S. Open</slamName>
         <playerID>P002</playerID>
         <playerName>Rafael Nadal</playerName>
-        <playerWinnings>$ 1,925,000*</playerWinnings>
+        <playerWinnings>$ 19,255,000*</playerWinnings>
     </slam>
     <slam slamID="2017_3">
         <slamName>Wimbledon Open</slamName>
@@ -65,5 +65,23 @@
         <playerID>P001</playerID>
         <playerName>Rodger Federer</playerName>
         <playerWinnings>$ 1,875,000*</playerWinnings>
+    </slam>
+    <slam slamID="2023_5">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 12*</playerWinnings>
+    </slam>
+    <slam slamID="2023_5">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 11,111,111*</playerWinnings>
+    </slam>
+    <slam slamID="2023_5">
+        <slamName>French Open</slamName>
+        <playerID>P002</playerID>
+        <playerName>Rafael Nadal</playerName>
+        <playerWinnings>$ 1,111*</playerWinnings>
     </slam>
 </SLAMS>
