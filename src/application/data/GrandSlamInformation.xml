@@ -72,4 +72,10 @@
         <playerName>RogerFederer</playerName>
         <playerWinnings>10000</playerWinnings>
     </slam>
+    <slam slamID="aaaaa">
+        <slamName>aaaaa</slamName>
+        <playerID>aaaaa</playerID>
+        <playerName>aaaaa</playerName>
+        <playerWinnings>123456789</playerWinnings>
+    </slam>
 </SLAMS>

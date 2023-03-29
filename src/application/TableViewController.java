@@ -64,8 +64,8 @@ public class TableViewController implements Initializable{
 		
 	}
 	
-	public void edit() {
-		System.out.println("hello");
+	public void edit() throws IOException {
+		Main.ss.switchScene(Main.EDIT_CHOICE_PATH);
 	}
 	
 	

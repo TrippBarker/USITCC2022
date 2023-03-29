@@ -33,7 +33,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		ss = new SceneSwitcher(primaryStage);
-		ss.switchScene(EDIT_CHOICE_PATH);
+		ss.switchScene(LOGIN_SCENE_PATH);
 		//gSlams.add(new GrandSlam("2022_1", "Austrailian Open", "P002", "Rafael Nadal", "$ 2,275,000*"));
 		//gSlams.add(new GrandSlam("2022_2", "French Open", "P002", "Rafael Nadal", "$ 1,925,000*"));
 		//gSlams.add(new GrandSlam("2020_2", "French Open", "P002", "Rafael Nadal", "$ 1,775,000*"));
