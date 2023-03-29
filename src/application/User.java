@@ -27,4 +27,8 @@ public class User {
 		return "USERNAME: " + getUsername() + "\nPASSWORD: " + getPassword();
 	}
 	
+	public void hashPass() {
+		this.setPassword(String.valueOf(31 * (this.getUsername().hashCode() * (this.getPassword().hashCode()))));
+	}
+	
 }

@@ -24,7 +24,7 @@ public class Main extends Application {
 	public static final UserReader userReader = new UserReader();
 	
 	public static ObservableList<GrandSlam> gSlams = FXCollections.observableArrayList(gSlamReader.readXML());
-	public static ArrayList<User> usersAL = userReader.readXML();
+	public static ObservableList<User> usersAL = FXCollections.observableArrayList(userReader.readXML());
 	
 	public static User currentUser;
 	
@@ -50,6 +50,12 @@ public class Main extends Application {
 		//usersAL.add(new Admin("admin", "nimda", "superuser"));
 		//usersAL.add(new Player("rfederer", "gsw20", "P001", "Roger", "Federer"));
 		//usersAL.add(new Player("rnadal", "gsw22", "P002", "Rafael", "Nadal"));
+		//for(User user: usersAL) {
+		//	user.hashPass();
+		//	if (user instanceof Admin) {
+		//		((Admin) user).hashAdminPass();
+		//	}
+		//}
 		//userWriter.buildDocument(usersAL);
 		
 		for (User user : usersAL) {

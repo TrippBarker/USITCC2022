@@ -25,5 +25,9 @@ public class Admin extends User{
 	public String toString() {
 		return "USERNAME: " + getUsername() + "\nPASSWORD: " + getPassword() + "\nADMINPW: " + getAdminPassword();
 	}
+	
+	public void hashAdminPass() {
+		this.setAdminPassword(String.valueOf(31 * (this.getUsername().hashCode() * (this.getAdminPassword().hashCode()))));
+	}
 
 }

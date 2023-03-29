@@ -19,12 +19,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import application.User;
+import javafx.collections.ObservableList;
 import application.Player;
 import application.Admin;
 
 public class UserWriter {
 	
-	public void buildDocument(ArrayList<User> users) 
+	public void buildDocument(ObservableList<User> users) 
 			throws ParserConfigurationException, TransformerException {
 		Document doc = createXMLDoc(users);
 		outputAsFile(doc, "src/application/data/Users.xml");
@@ -48,7 +49,7 @@ public class UserWriter {
 		return transformer;
 	}
 
-	public Document createXMLDoc(ArrayList<User> users) 
+	public Document createXMLDoc(ObservableList<User> users) 
 			throws ParserConfigurationException {
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -77,7 +78,7 @@ public class UserWriter {
 				addElement(userElm, "lName", player.getLName(), doc);
 			} else if (user instanceof Admin) {
 				Admin admin = (Admin) user;
-				addElement(userElm, "adminPassword", admin.getUsername(), doc);
+				addElement(userElm, "adminPassword", admin.getAdminPassword(), doc);
 			}
 		}
 		
@@ -90,11 +91,5 @@ public class UserWriter {
 		childElm.setTextContent(textVal);
 		parent.appendChild(childElm);
 		return childElm;
-	}
-	
-	private String hashPass(String username, String password) {
-		String hash;
-		hash = String.valueOf(31 * (username.hashCode() * (password.hashCode())));
-		return hash;
 	}
 }

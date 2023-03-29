@@ -19,4 +19,18 @@
         <fName>Rafael</fName>
         <lName>Nadal</lName>
     </user>
+    <user type="Player">
+        <username>tstark</username>
+        <password>851516070</password>
+        <playerID>P003</playerID>
+        <fName>Tony</fName>
+        <lName>Stark</lName>
+    </user>
+    <user type="Player">
+        <username>swilliams</username>
+        <password>-717863204</password>
+        <playerID>P004</playerID>
+        <fName>Serena</fName>
+        <lName>Williams</lName>
+    </user>
 </USERS>
